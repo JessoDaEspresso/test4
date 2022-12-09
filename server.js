@@ -32,7 +32,7 @@ app.get('/register', function (req, res) {
 //Register POST Route
 app.post('/register', function (req, res) {
     final.register(req.body).then(() => {
-        res.send(req.body.email + "registered successfully" + "<br><br><a href='/'>Home</a>");
+        res.send(req.body.email + " registered successfully" + "<br><br><a href='/'>Home</a>");
     }).catch((err) => {
         res.send(err + "<br><a href='/register'>Try Again</a>");
     });

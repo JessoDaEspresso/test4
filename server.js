@@ -40,7 +40,7 @@ app.get('/login', function (req, res) {
 //Post Login
 app.post('/login', function (req, res) {
     final.signIn(req.body).then(() => {
-        res.send(req.body.email + "signed in successfully" + "<br><br><a href='/'>Go Home</a>");
+        res.send(req.body.email + " signed in successfully" + "<br><br><a href='/'>Go Home</a>");
     }).catch((err) => {
         res.send(err + "<br><a href='/login'>Try Again</a>");
     });
